@@ -10,37 +10,39 @@ const Projects: React.FC = () => {
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <div className="flex items-center gap-4 mb-10">
-        <div className="text-gray-400"><FolderOpen size={32} /></div>
-        <h2 className="text-4xl font-bold tracking-tight text-white">Projects</h2>
+      <div className="flex items-center gap-3 mb-6 pb-2 border-b border-gray-700">
+        <div className="text-gray-500"><FolderOpen size={24} /></div>
+        <h2 className="text-3xl font-bold tracking-tight text-gray-300">Projects</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
         {PROJECTS.map((project) => (
           <div 
             key={project.id} 
             onClick={() => navigate(`/projects/${project.id}`)}
-            className="bg-[#191919] border border-gray-800 rounded-3xl overflow-hidden group hover:border-gray-600 transition-all duration-300 shadow-xl cursor-pointer"
+            className="bg-[#1a1a1a] border border-gray-600/30 rounded-lg overflow-hidden group hover:border-gray-600/50 transition-all duration-300 shadow-lg cursor-pointer w-full"
           >
-            <div className="aspect-[16/10] bg-gray-900 relative overflow-hidden">
+            <div className="w-full h-40 sm:h-48 bg-gray-900 relative overflow-hidden rounded-t-lg">
               <img 
                 src={project.imageUrl} 
                 alt={project.title} 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               {/* Watermark removed as requested */}
-              <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-bold text-gray-400">
+              <div className="absolute top-3 right-3 bg-gray-400/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-xs font-bold text-gray-900">
                 {project.year}
               </div>
             </div>
             
-            <div className="p-8">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-white group-hover:text-white transition-colors">{project.title}</h3>
-                  <p className="text-gray-500 text-xs font-medium uppercase tracking-widest mt-1">{project.role}</p>
+            <div className="p-5">
+              <div className="flex justify-between items-start mb-2 gap-2">
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <FolderOpen size={14} className="text-gray-500 flex-shrink-0" />
+                    <h3 className="text-base font-bold text-white">{project.title}</h3>
+                  </div>
                 </div>
-                <div className="flex gap-4 text-gray-500">
+                <div className="flex gap-2.5 text-gray-500 flex-shrink-0">
                   {project.liveUrl && (
                     <a 
                       href={project.liveUrl} 
@@ -48,7 +50,7 @@ const Projects: React.FC = () => {
                       onClick={(e) => e.stopPropagation()} 
                       className="hover:text-white transition-colors"
                     >
-                      <Globe size={18} />
+                      <Globe size={14} />
                     </a>
                   )}
                   {project.githubUrl && (
@@ -58,24 +60,33 @@ const Projects: React.FC = () => {
                       onClick={(e) => e.stopPropagation()} 
                       className="hover:text-white transition-colors"
                     >
-                      <ExternalLink size={18} />
+                      <ExternalLink size={14} />
                     </a>
                   )}
                 </div>
               </div>
               
-              <p className="text-gray-400 text-sm leading-relaxed mb-8 line-clamp-3">
+              <p className="text-gray-400 text-xs leading-relaxed mb-3">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className="flex items-center gap-1.5 px-3 py-1 bg-[#121212] border border-gray-800 text-gray-500 text-[10px] font-bold rounded-lg uppercase tracking-widest hover:text-white hover:border-gray-600 transition-colors cursor-default">
-                    <TechIcon name={tag} className="w-3 h-3" />
+              <div className="flex flex-wrap gap-1.5 mb-3">
+                {project.tags.slice(0, 2).map(tag => (
+                  <span key={tag} className="inline-flex items-center gap-1 px-2.5 py-1 bg-[#222222] border border-gray-600/30 text-gray-400 text-xs font-bold rounded-md uppercase tracking-widest hover:text-white hover:border-gray-600/50 transition-colors cursor-default">
+                    <TechIcon name={tag} className="w-2.5 h-2.5" />
                     {tag}
                   </span>
                 ))}
+                {project.tags.length > 2 && (
+                  <span className="inline-flex items-center px-2.5 py-1 bg-[#222222] border border-gray-600/30 text-gray-400 text-xs font-bold rounded-md uppercase tracking-widest">
+                    +{project.tags.length - 2}
+                  </span>
+                )}
               </div>
+
+              <a href={`/projects/${project.id}`} className="text-gray-500 text-xs font-medium hover:text-white transition-colors inline-flex items-center gap-1">
+                Read Problem Statement →
+              </a>
             </div>
           </div>
         ))}

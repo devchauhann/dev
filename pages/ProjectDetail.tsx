@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Globe, Github } from 'lucide-react';
+import { ArrowLeft, Globe, Github, Tag, Link as LinkIcon, Server, Lightbulb, FileText } from 'lucide-react';
 import { PROJECTS } from '../constants.tsx';
 
 const ProjectDetail: React.FC = () => {
@@ -27,69 +27,154 @@ const ProjectDetail: React.FC = () => {
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl mx-auto">
-      <div className="flex items-center justify-between mb-10">
-        <button 
-          onClick={() => navigate('/projects')}
-          className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors group"
-        >
-          <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-          <span className="text-sm font-medium">Back to Projects</span>
-        </button>
-        <div className="flex gap-4">
-          {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" className="p-2 bg-[#252525] border border-gray-800 rounded-xl text-gray-400 hover:text-white transition-all">
-              <Globe size={18} />
-            </a>
-          )}
-          {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" className="p-2 bg-[#252525] border border-gray-800 rounded-xl text-gray-400 hover:text-white transition-all">
-              <Github size={18} />
-            </a>
-          )}
-        </div>
-      </div>
+      {/* Back Button */}
+      <button 
+        onClick={() => navigate('/projects')}
+        className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors group mb-8"
+      >
+        <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+        <span className="text-sm font-medium">Back to Projects</span>
+      </button>
 
-      <div className="mb-10">
-        <p className="text-gray-500 text-sm font-bold uppercase tracking-[0.2em] mb-4">{project.role} — {project.year}</p>
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tighter">
-          {project.title}
-        </h1>
-      </div>
-
-      <div className="flex flex-wrap gap-2 mb-12">
-        {project.tags.map((tag) => (
-          <span 
-            key={tag} 
-            className="px-3 py-1 bg-[#252525] border border-gray-800 text-gray-400 text-[10px] font-bold rounded-md uppercase tracking-widest"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <p className="text-gray-400 text-xl md:text-2xl leading-relaxed mb-16 max-w-3xl font-medium">
-        {project.fullDescription || project.description}
-      </p>
-
-      <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden bg-gray-900 border border-gray-800 shadow-2xl mb-20 relative">
+      {/* Hero Image */}
+      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900 border border-gray-600/30 shadow-2xl mb-8 relative">
         <img 
           src={project.imageUrl} 
           alt={project.title} 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-10 md:gap-20 mb-20">
-        <h2 className="text-3xl font-bold text-white tracking-tight">The Problem</h2>
-        <div className="space-y-6">
-          <p className="text-gray-400 text-lg leading-relaxed">
-            {project.problemStatement || "This project was built to address technical challenges in its domain, focusing on efficiency and user-centric design."}
-          </p>
+      {/* Title Section */}
+      <div className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <LinkIcon size={20} className="text-gray-500" />
+          <h1 className="text-3xl md:text-4xl font-bold text-white">
+            {project.title}
+          </h1>
+        </div>
+
+        {/* Tags, Links, Tech Stack Section */}
+        <div className="space-y-4 mb-8">
+          {/* Tags */}
+          <div className="flex items-start gap-8">
+            <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
+              <Tag size={16} />
+              Tags
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span 
+                  key={tag} 
+                  className="px-3 py-1.5 bg-[#222222] border border-gray-600/30 text-gray-400 text-xs font-bold rounded-md uppercase tracking-widest"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Links */}
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
+              <LinkIcon size={16} />
+              Links
+            </div>
+            <div className="flex items-center gap-6">
+              {project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium border-b border-gray-400/30 hover:border-white pb-1">
+                  <Globe size={14} />
+                  Demo
+                </a>
+              )}
+              {project.githubUrl && (
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium border-b border-gray-400/30 hover:border-white pb-1">
+                  <Github size={14} />
+                  GitHub
+                </a>
+              )}
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          {project.techStackDetails && (
+            <div className="flex items-start gap-8">
+              <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
+                <Server size={16} />
+                Tech Stack
+              </div>
+              <div className="text-gray-400 text-sm leading-relaxed">
+                {[
+                  project.techStackDetails.backend,
+                  project.techStackDetails.frontend,
+                  project.techStackDetails.icons,
+                  project.techStackDetails.deployment
+                ].filter(Boolean).join(", ")}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="border-t border-gray-800 pt-12 pb-20 flex justify-between items-center">
+      {/* Overview Section */}
+      {project.fullDescription && (
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-4">Overview</h2>
+          <p className="text-gray-400 text-base leading-relaxed">
+            {project.fullDescription}
+          </p>
+        </div>
+      )}
+
+      {/* The Problem Section */}
+      {project.problemStatement && (
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-4">The Problem</h2>
+          <div className="bg-[#1a1a1a] border-l-4 border-gray-400 p-6 rounded-lg">
+            <p className="text-gray-400 text-base leading-relaxed italic">
+              {project.problemStatement}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* What I Did Section */}
+      {project.whatIDid && project.whatIDid.length > 0 && (
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6">What I Did</h2>
+          <ul className="space-y-3">
+            {project.whatIDid.map((item, index) => (
+              <li key={index} className="flex gap-4 text-gray-400 text-base leading-relaxed">
+                <span className="text-white font-bold flex-shrink-0">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Key Learnings Section */}
+      {project.keyLearnings && project.keyLearnings.length > 0 && (
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6">Key Learnings</h2>
+          <div className="space-y-4">
+            {project.keyLearnings.map((learning, index) => (
+              <div key={index} className="bg-[#1a1a1a] border border-gray-600/30 rounded-lg p-6">
+                <div className="flex items-start gap-3 mb-2">
+                  <Lightbulb size={16} className="text-yellow-500 flex-shrink-0 mt-1" />
+                  <h3 className="text-white font-bold text-base">{learning.title}</h3>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed ml-7">
+                  {learning.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Footer */}
+      <div className="border-t border-gray-600/30 pt-8 pb-8 flex justify-between items-center">
         <span className="text-gray-600 text-sm font-medium">© 2025 Dev Chauhan</span>
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

@@ -23,25 +23,25 @@ const Navigation: React.FC = () => {
   const currentProject = PROJECTS.find(p => p.id === projectSlug);
 
   return (
-    <nav className="relative z-50 mb-12 md:mb-16">
+    <nav className="relative z-50 mb-8 md:mb-10 pt-2">
       <div className="flex items-center justify-between">
         {/* Desktop Breadcrumb Navigation */}
-        <div className="hidden md:flex items-center text-[13px] font-medium tracking-tight whitespace-nowrap">
-          <Link to="/" className="text-gray-500 hover:text-white transition-colors duration-200">devchauhan</Link>
+        <div className="hidden md:flex items-center text-sm font-medium tracking-tight whitespace-nowrap gap-1">
+          <Link to="/" className="text-gray-400 hover:text-gray-300 transition-colors duration-200">devchauhan</Link>
           
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
             {navItems.map((item) => {
               const isActive = path === item.path || (item.path === '/projects' && isProjectDetail);
               return (
                 <React.Fragment key={item.path}>
-                  <span className="mx-2 text-gray-800 select-none">/</span>
+                  <span className="text-gray-600 select-none">/</span>
                   <Link
                     to={item.path}
-                    className={`flex items-center space-x-1.5 py-1 px-1 transition-all duration-200 ${
-                      isActive ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+                    className={`flex items-center space-x-1 py-1 px-0.5 transition-all duration-200 ${
+                      isActive ? 'text-white' : 'text-gray-500 hover:text-gray-400'
                     }`}
                   >
-                    <span className={isActive ? 'text-white' : 'text-gray-700'}>
+                    <span className={isActive ? 'text-white' : 'text-gray-500'}>
                       {item.icon}
                     </span>
                     <span>{item.name}</span>
@@ -52,19 +52,19 @@ const Navigation: React.FC = () => {
 
             {isProjectDetail && currentProject && (
               <>
-                <span className="mx-2 text-gray-800 select-none">/</span>
-                <span className="text-white font-bold py-1 px-1">{currentProject.title}</span>
+                <span className="text-gray-600 select-none">/</span>
+                <span className="text-white font-medium py-1 px-0.5">{currentProject.title}</span>
               </>
             )}
           </div>
         </div>
 
         {/* Mobile Header Breadcrumb */}
-        <div className="flex md:hidden items-center text-xs font-medium">
-          <Link to="/" className="text-gray-600">devchauhan</Link>
-          <span className="mx-2 text-gray-800">/</span>
-          <div className="flex items-center space-x-1.5 text-white">
-            <span className="text-gray-400">{activeItem.icon}</span>
+        <div className="flex md:hidden items-center text-xs font-medium gap-1">
+          <Link to="/" className="text-gray-400">devchauhan</Link>
+          <span className="text-gray-600">/</span>
+          <div className="flex items-center space-x-1 text-white">
+            <span className="text-white">{activeItem.icon}</span>
             <span>{activeItem.name}</span>
           </div>
         </div>
@@ -81,21 +81,23 @@ const Navigation: React.FC = () => {
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-10 left-0 right-0 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
-          <div className="bg-[#191919] border border-gray-800 rounded-xl p-1.5 shadow-2xl">
-            <div className="space-y-0.5">
+        <div className="md:hidden absolute top-16 left-0 right-0 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+          <div className="bg-[#1a1a1a] border border-gray-600/30 rounded-lg p-4 shadow-2xl mx-4">
+            <div className="space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-all ${
+                  className={`flex items-center space-x-3 px-3 py-2.5 rounded-lg transition-all ${
                     path === item.path || (item.path === '/projects' && isProjectDetail)
-                      ? 'bg-[#222] text-white' 
-                      : 'text-gray-400 hover:bg-[#1e1e1e] hover:text-white'
+                      ? 'bg-[#222222] text-gray-100' 
+                      : 'text-gray-500 hover:bg-[#222222] hover:text-gray-200'
                   }`}
                 >
-                  <span className="text-gray-500">{item.icon}</span>
+                  <span className={`${path === item.path || (item.path === '/projects' && isProjectDetail) ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {item.icon}
+                  </span>
                   <span className="text-sm font-medium">{item.name}</span>
                 </Link>
               ))}

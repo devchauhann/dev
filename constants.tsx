@@ -14,7 +14,34 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/devchauhann/brainsync/",
     liveUrl: "https://brainsync.vercel.app/",
     featured: true,
-    problemStatement: "Engineering students often struggle with scattered study resources across multiple platforms, WhatsApp groups, and physical libraries. Brainsync eliminates this 'information fatigue' by providing a structured, searchable, and always-accessible repository of academic assets."
+    problemStatement: "Engineering students often struggle with scattered study resources across multiple platforms, WhatsApp groups, and physical libraries. Brainsync eliminates this 'information fatigue' by providing a structured, searchable, and always-accessible repository of academic assets.",
+    whatIDid: [
+      "Built a centralized platform for all B.Tech study materials and resources",
+      "Implemented search and filter functionality for easy resource discovery",
+      "Designed an intuitive UI for seamless navigation and accessibility",
+      "Integrated file upload and sharing capabilities for the community",
+      "Deployed on Vercel for global accessibility and performance"
+    ],
+    techStackDetails: {
+      backend: "Next.js, Node.js, Firebase",
+      frontend: "React, TypeScript, Tailwind CSS",
+      icons: "Lucide React",
+      deployment: "Vercel"
+    },
+    keyLearnings: [
+      {
+        title: "Community-Driven Design",
+        description: "Learned how to design platforms that encourage community participation and resource sharing among users."
+      },
+      {
+        title: "Search Optimization",
+        description: "Implemented efficient search algorithms to help users find relevant materials quickly across thousands of documents."
+      },
+      {
+        title: "Scalability",
+        description: "Built the platform with scalability in mind to handle growing student base and increasing content library."
+      }
+    ]
   },
   {
     id: 'toole',

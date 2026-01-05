@@ -12,6 +12,17 @@ export interface Project {
   role: string;
   featured?: boolean;
   problemStatement?: string;
+  whatIDid?: string[];
+  techStackDetails?: {
+    backend?: string;
+    frontend?: string;
+    icons?: string;
+    deployment?: string;
+  };
+  keyLearnings?: {
+    title: string;
+    description: string;
+  }[];
 }
 
 export interface Skill {
