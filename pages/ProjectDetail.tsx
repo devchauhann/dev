@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Globe, Github, Tag, Link as LinkIcon, Server, Lightbulb, FileText } from 'lucide-react';
+import { ArrowLeft, Globe, Github, Tag, Link as LinkIcon, Server, Lightbulb, FileText, Database, ExternalLink } from 'lucide-react';
 import { PROJECTS } from '../constants.tsx';
 
 const ProjectDetail: React.FC = () => {
@@ -26,14 +26,14 @@ const ProjectDetail: React.FC = () => {
   }
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl mx-auto">
-      {/* Back Button */}
+    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-4xl pt-6 md:pt-8">
+      {/* Back Button - Top */}
       <button 
         onClick={() => navigate('/projects')}
-        className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors group mb-8"
+        className="flex items-center gap-2 text-white hover:text-gray-300 transition-colors group mb-8 font-medium"
       >
         <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-        <span className="text-sm font-medium">Back to Projects</span>
+        <span className="text-sm">Back to Projects</span>
       </button>
 
       {/* Hero Image */}
@@ -45,107 +45,95 @@ const ProjectDetail: React.FC = () => {
         />
       </div>
 
-      {/* Title Section */}
-      <div className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <LinkIcon size={20} className="text-gray-500" />
-          <h1 className="text-3xl md:text-4xl font-bold text-white">
+      {/* Title & Quick Info Section */}
+      <div className="mb-8">
+        <div className="flex items-center gap-2 mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-white">
             {project.title}
           </h1>
         </div>
-
-        {/* Tags, Links, Tech Stack Section */}
-        <div className="space-y-4 mb-8">
-          {/* Tags */}
-          <div className="flex items-start gap-8">
-            <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
-              <Tag size={16} />
-              Tags
+        
+        {/* Quick Info - Icon based layout like reference */}
+        <div className="space-y-6 text-xs">
+          {/* Tags Section */}
+          <div className="flex gap-4">
+            <div className="text-gray-500 flex items-center gap-1.5 flex-shrink-0 w-16">
+              <Tag size={14} />
+              <span className="text-gray-400">Tags</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span 
-                  key={tag} 
-                  className="px-3 py-1.5 bg-[#222222] border border-gray-600/30 text-gray-400 text-xs font-bold rounded-md uppercase tracking-widest"
-                >
+              {project.tags.slice(0, 2).map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-[#222222] border border-gray-600/30 text-gray-300 text-xs font-medium rounded">
                   {tag}
                 </span>
               ))}
+              {project.tags.length > 2 && (
+                <span className="px-3 py-1.5 bg-[#222222] border border-gray-600/30 text-gray-300 text-xs font-medium rounded">
+                  +{project.tags.length - 2}
+                </span>
+              )}
             </div>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
-              <LinkIcon size={16} />
-              Links
+          {/* Links Section */}
+          <div className="flex gap-4">
+            <div className="text-gray-500 flex items-center gap-1.5 flex-shrink-0 w-16">
+              <Globe size={14} />
+              <span className="text-gray-400">Links</span>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
               {project.liveUrl && (
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium border-b border-gray-400/30 hover:border-white pb-1">
-                  <Globe size={14} />
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-xs font-medium flex items-center gap-1 underline">
+                  <ExternalLink size={12} />
                   Demo
                 </a>
               )}
               {project.githubUrl && (
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium border-b border-gray-400/30 hover:border-white pb-1">
-                  <Github size={14} />
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-xs font-medium flex items-center gap-1 underline">
+                  <Github size={12} />
                   GitHub
                 </a>
               )}
             </div>
           </div>
 
-          {/* Tech Stack */}
-          {project.techStackDetails && (
-            <div className="flex items-start gap-8">
-              <div className="flex items-center gap-2 text-gray-500 text-sm font-medium uppercase tracking-wider min-w-[80px]">
-                <Server size={16} />
-                Tech Stack
-              </div>
-              <div className="text-gray-400 text-sm leading-relaxed">
-                {[
-                  project.techStackDetails.backend,
-                  project.techStackDetails.frontend,
-                  project.techStackDetails.icons,
-                  project.techStackDetails.deployment
-                ].filter(Boolean).join(", ")}
-              </div>
+          {/* Tech Stack Section */}
+          <div className="flex gap-4">
+            <div className="text-gray-500 flex items-center gap-1.5 flex-shrink-0">
+              <Database size={14} />
+              <span className="text-gray-400">Tech Stack</span>
             </div>
-          )}
+            <div className="text-gray-300">
+              {project.tags.join(", ")}
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Overview Section */}
       {project.fullDescription && (
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">Overview</h2>
-          <p className="text-gray-400 text-base leading-relaxed">
-            {project.fullDescription}
-          </p>
+        <div className="mb-6">
+          <h2 className="text-sm font-bold text-white mb-3 uppercase tracking-widest">Overview</h2>
+          <p className="text-xs text-gray-400 leading-relaxed">{project.fullDescription}</p>
         </div>
       )}
 
-      {/* The Problem Section */}
+      {/* Problem Section - With Vertical Line */}
       {project.problemStatement && (
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-4">The Problem</h2>
-          <div className="bg-[#1a1a1a] border-l-4 border-gray-400 p-6 rounded-lg">
-            <p className="text-gray-400 text-base leading-relaxed italic">
-              {project.problemStatement}
-            </p>
-          </div>
+        <div className="mb-6 relative pl-4 border-l-2 border-gray-600/50">
+          <h2 className="text-sm font-bold text-white mb-3 uppercase tracking-widest">The Problem</h2>
+          <p className="text-xs text-gray-400 leading-relaxed">{project.problemStatement}</p>
         </div>
       )}
 
       {/* What I Did Section */}
       {project.whatIDid && project.whatIDid.length > 0 && (
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6">What I Did</h2>
-          <ul className="space-y-3">
+        <div className="mb-6">
+          <h2 className="text-sm font-bold text-white mb-3 uppercase tracking-widest">What I Did</h2>
+          <ul className="space-y-2">
             {project.whatIDid.map((item, index) => (
-              <li key={index} className="flex gap-4 text-gray-400 text-base leading-relaxed">
-                <span className="text-white font-bold flex-shrink-0">•</span>
+              <li key={index} className="text-xs text-gray-400 leading-relaxed flex gap-2">
+                <span className="text-gray-600 flex-shrink-0">•</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -155,18 +143,13 @@ const ProjectDetail: React.FC = () => {
 
       {/* Key Learnings Section */}
       {project.keyLearnings && project.keyLearnings.length > 0 && (
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-6">Key Learnings</h2>
-          <div className="space-y-4">
+        <div className="mb-6">
+          <h2 className="text-sm font-bold text-white mb-3 uppercase tracking-widest">Key Learnings</h2>
+          <div className="space-y-3">
             {project.keyLearnings.map((learning, index) => (
-              <div key={index} className="bg-[#1a1a1a] border border-gray-600/30 rounded-lg p-6">
-                <div className="flex items-start gap-3 mb-2">
-                  <Lightbulb size={16} className="text-yellow-500 flex-shrink-0 mt-1" />
-                  <h3 className="text-white font-bold text-base">{learning.title}</h3>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed ml-7">
-                  {learning.description}
-                </p>
+              <div key={index}>
+                <h3 className="text-white font-bold text-xs mb-1">{learning.title}</h3>
+                <p className="text-gray-400 text-xs leading-relaxed">{learning.description}</p>
               </div>
             ))}
           </div>
@@ -174,13 +157,13 @@ const ProjectDetail: React.FC = () => {
       )}
 
       {/* Footer */}
-      <div className="border-t border-gray-600/30 pt-8 pb-8 flex justify-between items-center">
-        <span className="text-gray-600 text-sm font-medium">© 2025 Dev Chauhan</span>
+      <div className="border-t border-gray-600/30 pt-4 pb-4 flex justify-between items-center">
+        <span className="text-gray-600 text-xs font-medium">© 2025 Dev Chauhan</span>
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-gray-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest"
+          className="text-gray-500 hover:text-white transition-colors text-[10px] font-bold uppercase tracking-widest"
         >
-          Back to top
+          Back to top ↑
         </button>
       </div>
     </div>
