@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout.tsx';
 import Home from './pages/Home.tsx';
 import Projects from './pages/Projects.tsx';
@@ -10,7 +10,7 @@ import Experience from './pages/Experience.tsx';
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ const App: React.FC = () => {
           <Route path="/experience" element={<Experience />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
