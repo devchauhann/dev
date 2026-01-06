@@ -45,9 +45,9 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'toole',
-    title: "Toole.me",
+    title: "Toole",
     description: "Free daily-use tools for developers. A comprehensive collection of utility tools to boost developer productivity.",
-    fullDescription: "Toole.me is a developer-first suite of essential utility tools designed to remove friction from the daily coding workflow. It provides a clean, ad-free environment for tasks like JSON formatting, base64 encoding/decoding, color code conversion, and unit testing helpers. It's built for speed and privacy, processing data locally whenever possible.",
+    fullDescription: "Toole is a developer-first suite of essential utility tools designed to remove friction from the daily coding workflow. It provides a clean, ad-free environment for tasks like JSON formatting, base64 encoding/decoding, color code conversion, and unit testing helpers. It's built for speed and privacy, processing data locally whenever possible.",
     imageUrl: "/toole.png",
     year: "2025",
     role: "Free Tools",
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'githubprofile',
-    title: "GitHub Profile README Generator",
+    title: "GitHub Profile Generator",
     description: "Open source tool to create professional GitHub profile READMEs with stats, visitors count, and dynamic widgets.",
     fullDescription: "An intuitive web application that allows developers to orchestrate professional GitHub profiles without writing a single line of Markdown manually. It offers a live-preview interface where users can toggle stats cards, social icons, and visitor counters, generating optimized code ready for their repositories.",
     imageUrl: "/githubprofile.png",
