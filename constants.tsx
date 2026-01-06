@@ -131,5 +131,17 @@ export const EXPERIENCE: ExperienceItem[] = [
     company: 'Freelance',
     period: '2023 - Present',
     description: 'Building production-ready applications for startups. Specializing in Next.js, AI integrations, and scalable architecture.'
+  },
+  {
+    role: 'Frontend Developer',
+    company: 'StartupX',
+    period: '2022 - 2023',
+    description: 'Developed responsive web applications using React and TypeScript. Implemented complex UI/UX features and optimized performance for improved user experience.'
+  },
+  {
+    role: 'Jr. Web Developer',
+    company: 'Tech Solutions Inc.',
+    period: '2021 - 2022',
+    description: 'Collaborated with cross-functional teams to build web solutions. Learned full-stack development practices, version control, and agile methodologies.'
   }
 ];

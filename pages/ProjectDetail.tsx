@@ -37,7 +37,7 @@ const ProjectDetail: React.FC = () => {
       </button>
 
       {/* Hero Image */}
-      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-900 border border-gray-600/30 shadow-2xl mb-8 relative">
+      <div className="w-full aspect-video rounded-lg overflow-hidden bg-gray-750 border border-gray-600/30 shadow-2xl mb-8 relative">
         <img 
           src={project.imageUrl} 
           alt={project.title} 
