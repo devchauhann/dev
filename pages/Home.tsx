@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         </div>
         <div className="w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden bg-gray-900 border border-gray-600/30 shadow-xl grayscale brightness-110 contrast-110 flex-shrink-0">
           <img 
-            src="https://picsum.photos/seed/dev-chauhan-portrait/800/800" 
+            src="/dev.png" 
             alt="Dev Chauhan" 
             className="w-full h-full object-cover"
           />
@@ -121,16 +121,16 @@ const Home: React.FC = () => {
       {/* Footer */}
       <div className="pt-6 border-t border-gray-600/30">
         <div className="flex gap-2 justify-center">
-          <a href="https://linkedin.com" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
+          <a href="https://linkedin.com/in/devchauhann3" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Linkedin size={18} />
           </a>
           <a href="https://github.com/devchauhan" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Github size={18} />
           </a>
-          <a href="https://youtube.com" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
+          <a href="https://youtube.com/devchauhann" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Youtube size={18} />
           </a>
-          <a href="https://instagram.com" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
+          <a href="https://instagram.com/devchauhan.in" target="_blank" className="p-2 text-gray-400 hover:text-white transition-colors">
             <Instagram size={18} />
           </a>
         </div>

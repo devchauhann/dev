@@ -1,0 +1,27 @@
+# Robots.txt for Dev Chauhan Portfolio
+# https://devchauhan.in
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: 
+
+# Specific rules for common crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://devchauhan.in/sitemap.xml
+
+# Request rate limit (optional)
+User-agent: *
+Request-rate: 1/10
+
+# Comment for humans
+# Welcome! This is the robots.txt for Dev Chauhan's portfolio
+# Feel free to explore and index all content

@@ -3,6 +3,50 @@ import { Project, Skill, ExperienceItem } from './types.ts';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'colora',
+    title: "Colora",
+    description: "Professional Color Design Platform with 500+ named colors and comprehensive color utilities for modern design workflows.",
+    fullDescription: "Colora is a comprehensive color design platform built with React and TypeScript. It provides designers, developers, and creative professionals with an extensive toolkit for color exploration, manipulation, and professional color management. Whether you're building a brand palette, analyzing color accessibility, or implementing color schemes, Colora offers an intuitive interface backed by powerful algorithms and color utilities.",
+    imageUrl: "/colora.png",
+    year: "2025",
+    role: "Color Design Tool",
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Color Theory', 'Web Design'],
+    githubUrl: "https://github.com/devchauhann/colora",
+    liveUrl: "https://colora.in",
+    featured: true,
+    problemStatement: "Designers and developers often lack a unified platform for professional color management, accessibility checking, and palette generation. They struggle with color conversion between formats, finding harmonious color schemes, and ensuring WCAG compliance. Colora solves this by providing a comprehensive toolkit with 500+ named colors, multiple design utilities, and real-time visualization.",
+    whatIDid: [
+      "Built a comprehensive color database with 500+ named colors and their psychological meanings",
+      "Implemented RGB, HSL, CMYK color space conversions with precise algorithms",
+      "Created multiple design tools: Palette Generator, Brand Mockup, Shadow Lab, and Mesh Architect",
+      "Integrated WCAG contrast ratio checker for accessibility compliance",
+      "Implemented Image Picker to extract color palettes from uploaded images",
+      "Added Tailwind CSS color generation and preview functionality",
+      "Built a TypeScale tool for typography and color coordination",
+      "Deployed on high-performance infrastructure for instant color processing"
+    ],
+    techStackDetails: {
+      backend: "React Server Components, Node.js",
+      frontend: "React, TypeScript, Tailwind CSS, Framer Motion",
+      icons: "Lucide React",
+      deployment: "Vercel"
+    },
+    keyLearnings: [
+      {
+        title: "Color Science & Theory",
+        description: "Deep dive into color psychology, color spaces, and accessibility standards (WCAG). Learned how to convert between different color models and implement accurate color algorithms."
+      },
+      {
+        title: "Real-time Data Processing",
+        description: "Implemented efficient algorithms for palette generation, color harmony calculations, and image-based color extraction without blocking the UI."
+      },
+      {
+        title: "Design Tool Development",
+        description: "Built interactive design utilities with live previews, understanding how professional design tools work under the hood and providing seamless user experiences."
+      }
+    ]
+  },
+  {
     id: 'brainsync',
     title: "Brainsync",
     description: "B.Tech study materials, notes, and question papers all in one place. A comprehensive educational platform designed for engineering students.",
@@ -54,7 +98,37 @@ export const PROJECTS: Project[] = [
     tags: ['JavaScript', 'HTML', 'CSS', 'Web APIs', 'Open Source'],
     githubUrl: "https://github.com/devchauhann/toole",
     liveUrl: "https://toole.me",
-    problemStatement: "Most online developer tools are cluttered with ads, have poor UI/UX, or require accounts for basic features. Toole.me offers a minimalist, 'utility-first' approach that saves time and respects the user's workspace."
+    problemStatement: "Most online developer tools are cluttered with ads, have poor UI/UX, or require accounts for basic features. Toole.me offers a minimalist, 'utility-first' approach that saves time and respects the user's workspace.",
+    whatIDid: [
+      "Built 15+ essential developer tools with zero external dependencies",
+      "Implemented local-first processing for JSON, Base64, and code utilities",
+      "Created a minimalist, ad-free interface focused on user productivity",
+      "Added copy-to-clipboard functionality for seamless workflow integration",
+      "Optimized all tools for performance with real-time processing",
+      "Deployed globally on Vercel for instant access from any location",
+      "Maintained open-source repository with active community contributions",
+      "Implemented dark mode and responsive design for all devices"
+    ],
+    techStackDetails: {
+      backend: "Vanilla JavaScript, Web APIs",
+      frontend: "HTML5, CSS3, JavaScript ES6+",
+      icons: "No external frameworks, pure web standards",
+      deployment: "Vercel"
+    },
+    keyLearnings: [
+      {
+        title: "Minimalist Design Philosophy",
+        description: "Learned how to build powerful tools with minimal UI clutter, focusing on functionality and user experience. Every feature serves a purpose."
+      },
+      {
+        title: "Client-Side Processing",
+        description: "Mastered local-first processing techniques to ensure user data privacy while maintaining performance. No data is sent to servers."
+      },
+      {
+        title: "Web Standards & APIs",
+        description: "Deepened knowledge of modern Web APIs like Clipboard API, FileReader, and Canvas for building standalone web utilities."
+      }
+    ]
   },
   {
     id: 'githubprofile',
@@ -67,7 +141,37 @@ export const PROJECTS: Project[] = [
     tags: ['HTML', 'CSS', 'JavaScript', 'GitHub API', 'Open Source'],
     githubUrl: "https://github.com/devchauhann/githubprofile",
     liveUrl: "https://githubprofilegenerator.vercel.app",
-    problemStatement: "GitHub profiles are a developer's digital resume, but manually configuring dynamic widgets and layout structures in Markdown is tedious. This tool automates the aesthetic and functional aspects of profile creation."
+    problemStatement: "GitHub profiles are a developer's digital resume, but manually configuring dynamic widgets and layout structures in Markdown is tedious. This tool automates the aesthetic and functional aspects of profile creation.",
+    whatIDid: [
+      "Built an intuitive drag-and-drop interface for README customization",
+      "Integrated GitHub API to fetch real-time user statistics and repo data",
+      "Created dynamic widget system with stats cards, badges, and social links",
+      "Implemented live preview showing exact README output in real-time",
+      "Added visitor counter integration with automatic SVG generation",
+      "Generated optimized Markdown code with one-click copy functionality",
+      "Added multiple professional README templates to choose from",
+      "Deployed globally with zero configuration required for users"
+    ],
+    techStackDetails: {
+      backend: "GitHub API, Node.js backend",
+      frontend: "HTML5, CSS3, JavaScript, GitHub Markdown",
+      icons: "Custom SVG badges and icons",
+      deployment: "Vercel"
+    },
+    keyLearnings: [
+      {
+        title: "API Integration",
+        description: "Learned how to integrate with GitHub's REST API to fetch user data, repositories, and statistics in real-time while managing rate limits."
+      },
+      {
+        title: "Code Generation",
+        description: "Developed algorithms to generate clean, optimized Markdown code from visual configurations, ensuring portability and reusability."
+      },
+      {
+        title: "Live Preview Architecture",
+        description: "Implemented efficient live preview system that updates Markdown preview without performance overhead as users modify their profiles."
+      }
+    ]
   },
   {
     id: 'nearchat',
@@ -80,7 +184,37 @@ export const PROJECTS: Project[] = [
     tags: ['Kotlin', 'Bluetooth', 'Mesh Networking', 'P2P', 'Hackathon'],
     githubUrl: "https://github.com/devchauhann/nearchat",
     liveUrl: "https://devchauhann.github.io/nearchat/",
-    problemStatement: "In regions with zero internet or cellular connectivity—such as disaster zones or remote expeditions—digital communication is impossible. Nearchat solves this by turning every mobile device into a node in a self-healing mesh network."
+    problemStatement: "In regions with zero internet or cellular connectivity—such as disaster zones or remote expeditions—digital communication is impossible. Nearchat solves this by turning every mobile device into a node in a self-healing mesh network.",
+    whatIDid: [
+      "Architected BLE mesh networking protocol from scratch for multi-hop communication",
+      "Implemented self-healing mesh network that automatically reroutes messages around obstacles",
+      "Built native Android app in Kotlin with modern Material Design",
+      "Created efficient message queuing system for reliability in poor connectivity",
+      "Implemented device discovery and automatic peer connection management",
+      "Added encryption for secure peer-to-peer messaging without servers",
+      "Optimized BLE power consumption for extended battery life",
+      "Developed intuitive UI for mesh network visualization and status monitoring"
+    ],
+    techStackDetails: {
+      backend: "BLE Protocol Stack, Mesh Networking",
+      frontend: "Kotlin, Android SDK, Material Design",
+      icons: "Material Icons",
+      deployment: "Android Play Store"
+    },
+    keyLearnings: [
+      {
+        title: "Bluetooth Low Energy Protocol",
+        description: "Deep expertise in BLE advertising, scanning, connecting, and GATT characteristics. Understanding of power consumption optimization and range limitations."
+      },
+      {
+        title: "Mesh Network Architecture",
+        description: "Learned mesh routing algorithms, message flooding, duplicate detection, and self-healing mechanisms for resilient peer-to-peer networks."
+      },
+      {
+        title: "Offline-First Design",
+        description: "Developed patterns for building reliable systems that work without internet connectivity, focusing on eventual consistency and message reliability."
+      }
+    ]
   },
   {
     id: 'iconworld',
@@ -93,7 +227,37 @@ export const PROJECTS: Project[] = [
     tags: ['HTML', 'CSS', 'JavaScript', 'SVG', 'Design'],
     githubUrl: "https://github.com/devchauhann/iconworld",
     liveUrl: "https://iconworld.vercel.app",
-    problemStatement: "Finding consistent, high-quality icons usually requires expensive subscriptions or navigating bloated libraries. IconWorld provides a lightweight, focused alternative for projects that need speed and visual harmony."
+    problemStatement: "Finding consistent, high-quality icons usually requires expensive subscriptions or navigating bloated libraries. IconWorld provides a lightweight, focused alternative for projects that need speed and visual harmony.",
+    whatIDid: [
+      "Curated and optimized 1000+ SVG icons for web and print use",
+      "Implemented powerful full-text search with fuzzy matching across icon metadata",
+      "Created category-based browsing system with tags and filters",
+      "Built instant download/copy-to-clipboard functionality for ease of use",
+      "Optimized all SVGs for minimal file size without quality loss",
+      "Implemented lazy loading for smooth browsing performance",
+      "Added icon customization (color, size) with live preview",
+      "Created developer-friendly CDN for direct icon linking in projects"
+    ],
+    techStackDetails: {
+      backend: "Static generation, CDN delivery",
+      frontend: "HTML5, CSS3, JavaScript, SVG optimization",
+      icons: "1000+ custom and adapted SVGs",
+      deployment: "Vercel with CDN"
+    },
+    keyLearnings: [
+      {
+        title: "SVG Optimization",
+        description: "Mastered SVG optimization techniques including path simplification, compression, and viewBox optimization to reduce file size while maintaining visual quality."
+      },
+      {
+        title: "Full-Text Search Implementation",
+        description: "Implemented client-side full-text search with fuzzy matching and relevance scoring, enabling fast icon discovery across large datasets."
+      },
+      {
+        title: "Design Systems & Consistency",
+        description: "Learned how to maintain visual consistency across large icon sets using grid systems, stroke widths, and design principles."
+      }
+    ]
   },
   {
     id: 'macos',
@@ -107,7 +271,37 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/devchauhann/devchauhann.github.io",
     liveUrl: "https://devchauhann.github.io/",
     featured: true,
-    problemStatement: "Standard portfolios often feel like static documents. This project pushes the boundaries of web interactivity, turning a personal site into a memorable digital experience that showcases technical depth through playful design."
+    problemStatement: "Standard portfolios often feel like static documents. This project pushes the boundaries of web interactivity, turning a personal site into a memorable digital experience that showcases technical depth through playful design.",
+    whatIDid: [
+      "Built a fully functional macOS desktop simulation using vanilla JavaScript",
+      "Implemented draggable window system with z-index management and minimize/maximize functionality",
+      "Created animated dock with spring physics and bounce effects matching macOS behavior",
+      "Developed control center panel with real-time system stats and quick access buttons",
+      "Added wallpaper management system with dynamic background switching",
+      "Implemented Spotlight search functionality for app discovery",
+      "Created window management system with overlap detection and snap-to-grid",
+      "Optimized rendering for smooth 60fps animations across all browsers"
+    ],
+    techStackDetails: {
+      backend: "Vanilla JavaScript, no dependencies",
+      frontend: "HTML5, CSS3 with advanced animations",
+      icons: "Custom SVG-based macOS icons",
+      deployment: "GitHub Pages"
+    },
+    keyLearnings: [
+      {
+        title: "Advanced DOM Manipulation",
+        description: "Mastered complex DOM operations including event delegation, shadow DOM techniques, and efficient DOM querying for high-performance interactions."
+      },
+      {
+        title: "CSS Animations & Physics",
+        description: "Deep knowledge of CSS animations, transitions, and JavaScript-driven physics engines for creating natural, fluid motion that feels responsive."
+      },
+      {
+        title: "User Experience Design",
+        description: "Learned the importance of micro-interactions, feedback loops, and attention to detail that make interfaces feel polished and intuitive."
+      }
+    ]
   }
 ];
 

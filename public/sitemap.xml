@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+        <loc>https://devchauhan.in/</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/dev.png</image:loc>
+            <image:title>Dev Chauhan Portfolio</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/colora</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/colora.png</image:loc>
+            <image:title>Colora - Color Design Platform</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/brainsync</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/brainsync.png</image:loc>
+            <image:title>Brainsync - Study Materials Platform</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/toole</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/toole.png</image:loc>
+            <image:title>Toole - Developer Tools</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/githubprofile</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/githubprofile.png</image:loc>
+            <image:title>GitHub Profile Generator</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/nearchat</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/nearchat.png</image:loc>
+            <image:title>Nearchat - P2P Chat Application</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/iconworld</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/iconworld.png</image:loc>
+            <image:title>IconWorld - SVG Icons Library</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/projects/macos</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://devchauhan.in/macos.png</image:loc>
+            <image:title>MacOS Portfolio - Interactive Desktop</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/skills</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://devchauhan.in/experience</loc>
+        <lastmod>2025-01-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
