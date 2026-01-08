@@ -14,8 +14,9 @@
   Cache-Control: public, max-age=86400, s-maxage=604800
   Content-Type: text/plain
 
-/public/*
-  Cache-Control: public, max-age=31536000, immutable
+/structured-data.json
+  Cache-Control: public, max-age=86400, s-maxage=604800
+  Content-Type: application/json
 
 /*.js
   Cache-Control: public, max-age=31536000, immutable

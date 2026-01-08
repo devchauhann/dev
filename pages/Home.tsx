@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       {/* About Section */}
       <div className="relative pl-4 border-l border-gray-600/30">
         <p className="text-gray-400 text-sm leading-relaxed">
-          I'm a developer and content creator who enjoys building web applications and exploring new technologies. I focus on creating reliable systems rather than just experimenting with code. My journey started in 2019, and now I'm diving deep into full-stack development and AI integrations.
+          I'm a developer and builder who enjoys creating production-ready applications and exploring new technologies. I focus on building reliable systems with clean code and scalable architectures. My coding journey started in 2025, and I'm passionate about full-stack development, AI integrations, and system architecture.
         </p>
       </div>
 
@@ -84,10 +84,10 @@ const Home: React.FC = () => {
             <div className="absolute -left-8 top-1 w-4 h-4 bg-gray-600/50 rounded-full border-2 border-[#0a0a0a]"></div>
             <div className="group cursor-pointer">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Started Coding</h3>
-                <span className="text-xs text-gray-500">2019</span>
+                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Coding Journey Begins</h3>
+                <span className="text-xs text-gray-500">2025 - Present</span>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">Began my coding journey, learning fundamentals and building first projects to understand web development basics.</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Started my professional coding journey. Building production-ready applications with React, TypeScript, and modern web technologies. Focused on system architecture and scalable solutions.</p>
             </div>
           </div>
 
@@ -96,10 +96,10 @@ const Home: React.FC = () => {
             <div className="absolute -left-8 top-1 w-4 h-4 bg-gray-600/50 rounded-full border-2 border-[#0a0a0a]"></div>
             <div className="group cursor-pointer">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Web Development Focus</h3>
-                <span className="text-xs text-gray-500">2021 - 2023</span>
+                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Built Colora</h3>
+                <span className="text-xs text-gray-500">2025</span>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">Mastered React, Next.js, and full-stack development. Built multiple production-ready applications for startups.</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Created Colora, a comprehensive color design platform with 500+ named colors, color space conversions, palette generation, and WCAG accessibility checker. Deployed on Vercel as a production-ready product.</p>
             </div>
           </div>
 
@@ -108,13 +108,12 @@ const Home: React.FC = () => {
             <div className="absolute -left-8 top-1 w-4 h-4 bg-gray-600/50 rounded-full border-2 border-[#0a0a0a]"></div>
             <div className="group cursor-pointer">
               <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Full-Stack & AI Integration</h3>
-                <span className="text-xs text-gray-500">2024 - Present</span>
+                <h3 className="text-sm font-semibold text-white group-hover:text-gray-300 transition-colors">Launched Brainsync</h3>
+                <span className="text-xs text-gray-500">2025</span>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">Exploring AI/ML integrations, DevOps, and system architecture. Building scalable, intelligent applications.</p>
+              <p className="text-xs text-gray-500 leading-relaxed">Developed Brainsync, a centralized study platform for engineering students with searchable resources, file uploads, and community sharing features. Deployed on Vercel for global accessibility.</p>
             </div>
           </div>
-          
         </div>
       </div>
 
@@ -136,7 +135,7 @@ const Home: React.FC = () => {
         </div>
         <div className="flex items-center gap-4 justify-center mt-4">
           <div className="w-12 border-t border-gray-600/30"></div>
-          <p className="text-xs text-gray-500 font-medium">© 2025 Dev Chauhan</p>
+          <p className="text-xs text-gray-500 font-medium">© 2026 Dev Chauhan</p>
           <div className="w-12 border-t border-gray-600/30"></div>
         </div>
       </div>

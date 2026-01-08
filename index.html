@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#191919">
     <meta name="color-scheme" content="dark">
+
+    <!-- Favicon with animated SVG -->
+    <link rel="icon" type="image/svg+xml" href="/dev.webp">
+    <link rel="apple-touch-icon" href="/dev.webp">
+    <link rel="shortcut icon" href="/dev.webp" type="image/webp">
+
+    <!-- Image for Google Search Indexing -->
+    <link rel="image_src" href="https://devchauhan.in/dev.png">
+    <link rel="preload" as="image" href="/dev.png">
+
     <title>Dev Chauhan | Full Stack Developer & System Architect</title>
 
     <!-- Primary Meta Tags -->
@@ -25,6 +35,7 @@
     <meta property="og:description"
         content="Explore the portfolio of Dev Chauhan - building AI-powered applications and high-performance web systems. Check out projects like Colora, Brainsync, and more.">
     <meta property="og:image" content="https://devchauhan.in/dev.png">
+    <meta property="og:image:secure_url" content="https://devchauhan.in/dev.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
@@ -39,6 +50,11 @@
         content="Explore the portfolio of Dev Chauhan - building AI-powered applications and high-performance web systems. Check out projects like Colora, Brainsync, and more.">
     <meta name="twitter:image" content="https://devchauhan.in/dev.png">
     <meta name="twitter:creator" content="@devchauhann">
+
+    <!-- Image SEO Tags for Google Indexing -->
+    <meta property="image" content="https://devchauhan.in/dev.png">
+    <meta name="image" content="https://devchauhan.in/dev.png">
+    <meta itemprop="image" content="https://devchauhan.in/dev.png">
 
     <!-- Additional SEO Meta Tags -->
     <meta name="revisit-after" content="7 days">
@@ -56,24 +72,25 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Website Icon / Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23191919' stroke='%23333' stroke-width='2'/><text x='50%' y='52%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-size='50' fill='white' font-weight='900'>D</text></svg>">
-    <link rel="shortcut icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23191919' stroke='%23333' stroke-width='2'/><text x='50%' y='52%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-size='50' fill='white' font-weight='900'>D</text></svg>">
 
-    <!-- Structured Data (JSON-LD) -->
+
+    <!-- Structured Data (JSON-LD) - Person Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Dev Chauhan",
       "url": "https://devchauhan.in",
-      "image": "https://devchauhan.in/dev.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://devchauhan.in/dev.png",
+        "width": 1200,
+        "height": 630
+      },
       "sameAs": [
         "https://github.com/devchauhann",
-        "https://twitter.com/devchauhann3",
-        "https://linkedin.com/in/devchauhann3"
+        "https://twitter.com/devchauhann",
+        "https://linkedin.com/in/devchauhann"
       ],
       "jobTitle": "Full Stack Developer & System Architect",
       "worksFor": {
@@ -84,12 +101,69 @@
         "@type": "Place",
         "name": "New Delhi, India"
       },
-      "knowsAbout": ["React", "TypeScript", "Next.js", "Node.js", "System Architecture", "AI Applications", "Web Development"]
+      "knowsAbout": ["React", "TypeScript", "JavaScript", "CSS", "Tailwind CSS", "Git", "GitHub", "Vercel"]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - Homepage Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://devchauhan.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Skills",
+          "item": "https://devchauhan.in/skills"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Experience",
+          "item": "https://devchauhan.in/experience"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Projects",
+          "item": "https://devchauhan.in/projects"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dev Chauhan",
+      "url": "https://devchauhan.in",
+      "logo": "https://devchauhan.in/dev.png",
+      "description": "Full Stack Developer & System Architect Portfolio",
+      "sameAs": [
+        "https://github.com/devchauhann",
+        "https://twitter.com/devchauhann",
+        "https://linkedin.com/in/devchauhann"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "General",
+        "url": "https://devchauhan.in"
+      }
     }
     </script>
 
     <!-- Sitemap & RSS -->
     <link rel="sitemap" href="https://devchauhan.in/sitemap.xml" type="application/xml">
+    <link rel="alternate" type="application/json" href="https://devchauhan.in/structured-data.json">
 
     <!-- Performance & SEO Optimizations -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">

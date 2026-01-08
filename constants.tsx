@@ -318,21 +318,28 @@ export const SKILLS: Skill[] = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    role: 'Full Stack Engineer',
-    company: 'Freelance',
-    period: '2023 - Present',
-    description: 'Building production-ready applications for startups. Specializing in Next.js, AI integrations, and scalable architecture.'
+    role: 'Full Stack Developer',
+    company: 'Self-Employed / Freelance',
+    period: '2025 - Present',
+    description: 'Building production-ready applications and open-source projects. Specializing in React, TypeScript, Next.js, and modern web architecture. Developing AI-powered workflows and scalable systems.'
   },
   {
-    role: 'Frontend Developer',
-    company: 'StartupX',
-    period: '2022 - 2023',
-    description: 'Developed responsive web applications using React and TypeScript. Implemented complex UI/UX features and optimized performance for improved user experience.'
+  role: 'Founder  — Colora',
+  company: 'Early-Stage Product',
+  period: '2025',
+  description: 'Built Colora, a production-ready color design toolkit aimed at designers and frontend developers. Delivered advanced features such as 500+ named colors, live RGB/HSL/CMYK conversions, palette generation, brand mockups, shadow experimentation, and WCAG accessibility validation. Deployed as a high-performance web product on Vercel with a focus on usability, speed, and real-world design workflows.'
   },
   {
-    role: 'Jr. Web Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2021 - 2022',
-    description: 'Collaborated with cross-functional teams to build web solutions. Learned full-stack development practices, version control, and agile methodologies.'
-  }
+  role: 'Solo Developer — BrainSync',
+  company: 'College Project',
+  period: '2025',
+  description: 'Comprehensive educational companion app for CSE students. Access organized academic resources, track your progress, and boost productivity with 15 powerful features.'
+  },
+  {
+    role: 'Learning & Building',
+    company: 'Self-Driven Development',
+    period: '2025',
+    description: 'Mastering full-stack development, system architecture, and AI integrations. Building multiple projects including Brainsync, Toole, GitHub Profile Generator, and macOS Desktop Clone. Focusing on clean code practices and scalable solutions.'
+  },
+  
 ];
