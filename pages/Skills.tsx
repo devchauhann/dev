@@ -2,6 +2,7 @@
 import React from 'react';
 import { SKILLS } from '../constants';
 import { Command } from 'lucide-react';
+
 import { TechIcon } from '../components/TechIcons';
 
 const Skills: React.FC = () => {

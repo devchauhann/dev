@@ -306,17 +306,12 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: Skill[] = [
-  { technology: 'React', category: 'Frontend', status: 'Expert' },
-  { technology: 'Next.js', category: 'Frontend', status: 'Expert' },
-  { technology: 'TypeScript', category: 'Language', status: 'Expert' },
-  { technology: 'Node.js', category: 'Backend', status: 'Advanced' },
-  { technology: 'PostgreSQL', category: 'Database', status: 'Advanced' },
-  { technology: 'Supabase', category: 'Backend', status: 'Advanced' },
-  { technology: 'Tailwind CSS', category: 'Frontend', status: 'Expert' },
-  { technology: 'AI/LLMs', category: 'Integration', status: 'Intermediate' },
-  { technology: 'System Design', category: 'Architecture', status: 'Advanced' },
-  { technology: 'Docker', category: 'DevOps', status: 'Intermediate' },
-  { technology: 'Framer Motion', category: 'Animation', status: 'Advanced' }
+  { technology: 'React', usage: 'Learning' },
+  { technology: 'TypeScript', usage: 'Learning' },
+  { technology: 'Tailwind CSS', usage: 'Mostly used' },
+  { technology: 'JavaScript', usage: 'Mostly used' },
+  { technology: 'Git', usage: 'Mostly used' },
+  { technology: 'CSS', usage: 'Mostly used' }
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [

@@ -27,8 +27,7 @@ export interface Project {
 
 export interface Skill {
   technology: string;
-  category: string;
-  status: 'Expert' | 'Advanced' | 'Intermediate' | 'Beginner';
+  usage: 'Mostly used' | 'Used in few projects' | 'Learning';
 }
 
 export interface ExperienceItem {
