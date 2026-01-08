@@ -8,7 +8,10 @@ import {
   SiJavascript,
   SiCss3,
   SiGithub,
-  SiVercel
+  SiVercel,
+  SiHtml5,
+  SiKotlin,
+  SiNextdotjs
 } from "react-icons/si";
 
 export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name, className = "w-4 h-4" }) => {
@@ -36,6 +39,15 @@ export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name,
       return <SiGithub {...iconProps} />;
     case 'VERCEL':
       return <SiVercel {...iconProps} />;
+    case 'HTML':
+    case 'HTML5':
+      return <SiHtml5 {...iconProps} />;
+    case 'KOTLIN':
+      return <SiKotlin {...iconProps} />;
+    case 'NEXT.JS':
+    case 'NEXTJS':
+    case 'NEXT':
+      return <SiNextdotjs {...iconProps} />;
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
