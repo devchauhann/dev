@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Profile Image -->
+  <url>
+    <loc>https://devchauhan.in/</loc>
+    <image:image>
+      <image:loc>https://devchauhan.in/dev.png</image:loc>
+      <image:title>Dev Chauhan - Full Stack Developer &amp; System Architect</image:title>
+      <image:caption>Dev Chauhan Profile Picture - Full Stack Developer specializing in React, TypeScript, and modern web technologies</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Project Images -->
+  <url>
+    <loc>https://devchauhan.in/projects</loc>
+    <image:image>
+      <image:loc>https://devchauhan.in/colora.png</image:loc>
+      <image:title>Colora - Professional Color Design Platform</image:title>
+      <image:caption>Colora: Comprehensive color design toolkit with 500+ named colors and WCAG accessibility checker</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/brainsync.png</image:loc>
+      <image:title>Brainsync - Engineering Study Platform</image:title>
+      <image:caption>Brainsync: Centralized study materials and resources for B.Tech students</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/toole.png</image:loc>
+      <image:title>Toole - Developer Utility Tools</image:title>
+      <image:caption>Toole: Free daily-use tools for developers including JSON formatter, Base64 encoder, and more</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/githubprofile.png</image:loc>
+      <image:title>GitHub Profile Generator</image:title>
+      <image:caption>GitHub Profile Generator: Create professional GitHub profile READMEs with stats and widgets</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/nearchat.png</image:loc>
+      <image:title>NearChat - Proximity-Based Chat</image:title>
+      <image:caption>NearChat: Real-time messaging for nearby users based on location proximity</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/iconworld.png</image:loc>
+      <image:title>IconWorld - Icon Library</image:title>
+      <image:caption>IconWorld: Comprehensive icon library and management system for developers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://devchauhan.in/macos.png</image:loc>
+      <image:title>macOS Desktop Clone</image:title>
+      <image:caption>macOS Desktop Clone: Interactive web-based macOS desktop experience with working applications</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
