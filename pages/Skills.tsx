@@ -31,8 +31,7 @@ const Skills: React.FC = () => {
             <thead>
               <tr className="text-[9px] uppercase text-gray-500 border-b border-gray-600/30 tracking-[0.15em] bg-[#1a1a1a]">
                 <th className="py-2 font-bold px-4">Technology</th>
-                <th className="py-2 font-bold px-4">Category</th>
-                <th className="py-2 font-bold px-4">Status</th>
+                <th className="py-2 font-bold px-4">Usage</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-600/30">
@@ -46,11 +45,8 @@ const Skills: React.FC = () => {
                   </td>
                   <td className="py-2.5 px-4">
                     <span className="bg-[#252525] border border-gray-600/30 text-gray-400 text-[7px] px-1.5 py-0.5 rounded-md uppercase font-bold tracking-wider group-hover:text-gray-300 transition-colors">
-                      {skill.category}
+                      {skill.usage}
                     </span>
-                  </td>
-                  <td className="py-2.5 px-4 text-gray-500 text-xs font-medium group-hover:text-gray-400">
-                    {skill.status}
                   </td>
                 </tr>
               ))}

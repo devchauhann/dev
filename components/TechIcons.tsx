@@ -2,18 +2,11 @@
 import React from 'react';
 import {
   SiReact,
-  SiNextdotjs,
   SiTypescript,
-  SiNodedotjs,
-  SiPostgresql,
-  SiSupabase,
   SiTailwindcss,
-  SiDocker,
-  SiFramer,
   SiGit,
-  SiGithub,
-  SiHtml5,
-  SiJavascript
+  SiJavascript,
+  SiCss3
 } from "react-icons/si";
 
 export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name, className = "w-4 h-4" }) => {
@@ -23,40 +16,20 @@ export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name,
   switch (iconName) {
     case 'REACT':
       return <SiReact {...iconProps} />;
-    case 'NEXT.JS':
-    case 'NEXTJS':
-      return <SiNextdotjs {...iconProps} />;
     case 'TYPESCRIPT':
     case 'TS':
       return <SiTypescript {...iconProps} />;
-    case 'NODE.JS':
-    case 'NODE':
-      return <SiNodedotjs {...iconProps} />;
-    case 'POSTGRESQL':
-    case 'POSTGRES':
-      return <SiPostgresql {...iconProps} />;
-    case 'SUPABASE':
-      return <SiSupabase {...iconProps} />;
     case 'TAILWIND CSS':
     case 'TAILWIND':
       return <SiTailwindcss {...iconProps} />;
-    case 'DOCKER':
-      return <SiDocker {...iconProps} />;
-    case 'FRAMER MOTION':
-      return <SiFramer {...iconProps} />;
     case 'GIT':
       return <SiGit {...iconProps} />;
-    case 'GITHUB':
-      return <SiGithub {...iconProps} />;
-    case 'HTML':
-    case 'HTML5':
-      return <SiHtml5 {...iconProps} />;
     case 'JAVASCRIPT':
     case 'JS':
       return <SiJavascript {...iconProps} />;
-    case 'AI/LLMS':
-    case 'AI':
-    case 'SYSTEM DESIGN':
+    case 'CSS':
+    case 'CSS3':
+      return <SiCss3 {...iconProps} />;
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
