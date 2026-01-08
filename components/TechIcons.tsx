@@ -6,7 +6,9 @@ import {
   SiTailwindcss,
   SiGit,
   SiJavascript,
-  SiCss3
+  SiCss3,
+  SiGithub,
+  SiVercel
 } from "react-icons/si";
 
 export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name, className = "w-4 h-4" }) => {
@@ -30,6 +32,10 @@ export const TechIcon: React.FC<{ name: string; className?: string }> = ({ name,
     case 'CSS':
     case 'CSS3':
       return <SiCss3 {...iconProps} />;
+    case 'GITHUB':
+      return <SiGithub {...iconProps} />;
+    case 'VERCEL':
+      return <SiVercel {...iconProps} />;
     default:
       return (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>

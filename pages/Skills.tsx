@@ -18,10 +18,10 @@ const Skills: React.FC = () => {
 
       <div className="relative pl-4 mb-6 space-y-2 mt-6 border-l border-gray-600/30">
         <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-          Strong in <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">Python</span>, currently learning <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">JavaScript</span> and <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">SQL</span>, focused on building reliable systems rather than just experimenting with code.
+          Mostly using <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">React</span>, <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">TypeScript</span>, and <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">Tailwind CSS</span> to build modern, type-safe web applications with beautiful UI.
         </p>
         <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-          Hands-on with <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">website development</span>, <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">reusable React components</span>, and <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">mobile app development</span>, applying concepts directly in real projects, not tutorials.
+          Strong with <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">JavaScript</span> and <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">CSS</span>, using <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">Git</span> for version control. Deploy with <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">GitHub</span> and <span className="text-white underline decoration-gray-600 underline-offset-4 cursor-default">Vercel</span> for production-ready applications.
         </p>
       </div>
 

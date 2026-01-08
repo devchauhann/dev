@@ -311,7 +311,9 @@ export const SKILLS: Skill[] = [
   { technology: 'Tailwind CSS', usage: 'Mostly used' },
   { technology: 'JavaScript', usage: 'Mostly used' },
   { technology: 'Git', usage: 'Mostly used' },
-  { technology: 'CSS', usage: 'Mostly used' }
+  { technology: 'CSS', usage: 'Mostly used' },
+  { technology: 'GitHub', usage: 'Mostly used' },
+  { technology: 'Vercel', usage: 'Mostly used' }
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
