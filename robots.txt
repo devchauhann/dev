@@ -5,15 +5,6 @@
 User-agent: *
 Allow: /
 
-# Specific optimization for Google
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Optimization for Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
 
 # AI training restrictions
 User-agent: GPTBot
